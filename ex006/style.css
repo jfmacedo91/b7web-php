@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Serif', serif;
+}
+
+body {
+  display: grid;
+  place-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  min-height: 100vh;
+  background-color: darkslategrey;
+}
+
+form {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: gray;
+  box-shadow: 0 1px 2px #00000066;
+}
+
+form h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+form fieldset {
+  display: flex;
+  padding-block: 0.5rem;
+  border: none;
+}
+
+form fieldset input {
+  padding: 0.5rem;
+  border: 1px solid darkslategrey;
+}
+
+form fieldset input[type='submit'] {
+  color: white;
+  background-color: darkslategrey;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem;
+  font-size: 1rem;
+  border-radius: 1rem;
+  background-color: gray;
+  box-shadow: 0 1px 2px #00000066;
+}
