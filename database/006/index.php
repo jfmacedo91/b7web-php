@@ -24,5 +24,6 @@
 
   imagecopyresampled($image, $originalImg, 0, 0, 0, 0, $finalWidth, $finalHeight, $originalWidth, $originalHeight);
 
-  imagejpeg($image, 'Anya'.$finalHeight.'px.jpg', 100);
+  header("Content-Type: image/jpeg");
+  imagejpeg($image, null, 100);
 ?>
