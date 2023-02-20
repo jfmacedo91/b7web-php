@@ -21,20 +21,7 @@ class HomeController extends Controller {
 		]);
 	}
 
-	public function fotos() {
-		$this->render('fotos');
-	}
-
-	public function foto($parametros) {
-		echo 'Foto '.$parametros['id'];
-	}
-
-	public function sobre() {
-		$this->render('sobre');
-	}
-
 	public function sobreP($args) {
 		print_r($args);
 	}
-
 }
