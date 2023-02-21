@@ -29,8 +29,24 @@ class UsersController extends Controller {
 		$this->redirect('/create');
 	}
 
-	public function update() {
+	public function update($args) {
+		$user = User::select()->find($args['id']);
+		$this->render('update', [
+			'user' => $user
+		]);
+	}
 
+	public function updateAction($args) {
+		$name = filter_input(INPUT_POST, 'name');
+		$email = filter_input(INPUT_POST, 'email');
+
+		if($name && $email) {
+			User::update()->set('name', $email)->set('email', $email)->where('id', $args['id'])->execute();
+
+			$this->redirect('/');
+		}
+
+		$this->redirect('/user/'.$args['id'].'/update');
 	}
 
 	public function delete() {

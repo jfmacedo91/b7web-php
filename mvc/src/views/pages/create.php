@@ -12,7 +12,7 @@
     <input type="email" name="email" id="email">
   </label>
   <br><br>
-  <button type="submit">Enviar</button>
+  <button type="submit">Adicionar</button>
 </form>
 
 <?php $render('footer'); ?>
