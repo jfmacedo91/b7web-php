@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 20px;
+}
+
+table th {
+  padding: 10px;
+  background-color: #99999A;
+}
+
+table tr:hover td {
+  background-color: #EEEEEF;
+}
+
+table td {
+  padding: 10px;
+}
+
+table td img {
+  height: 20px;
+}
