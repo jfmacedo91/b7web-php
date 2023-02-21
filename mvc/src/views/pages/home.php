@@ -16,7 +16,7 @@
       <td><?=$user['email']?></td>
       <td>
         <a href="<?=$base;?>/user/<?=$user['id']?>/update">[EDITAR]</a>
-        <a href="<?=$base;?>/user/<?=$user['id']?>/delete">[DELETAR]</a>
+        <a href="<?=$base;?>/user/<?=$user['id']?>/delete" onclick="return confirm('Tem certeza que deseja escluir <?=$user['name']?>?');">[DELETAR]</a>
       </td>
     </tr>
   <?php endforeach; ?>

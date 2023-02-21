@@ -41,7 +41,7 @@ class UsersController extends Controller {
 		$email = filter_input(INPUT_POST, 'email');
 
 		if($name && $email) {
-			User::update()->set('name', $email)->set('email', $email)->where('id', $args['id'])->execute();
+			User::update()->set('name', $name)->set('email', $email)->where('id', $args['id'])->execute();
 
 			$this->redirect('/');
 		}
@@ -49,7 +49,8 @@ class UsersController extends Controller {
 		$this->redirect('/user/'.$args['id'].'/update');
 	}
 
-	public function delete() {
-		
+	public function delete($args) {
+		User::delete()->where('id', $args['id'])->execute();
+		$this->redirect('/');
 	}
 }
