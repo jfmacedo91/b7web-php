@@ -28,4 +28,12 @@ class UsersController extends Controller {
 		}
 		$this->redirect('/create');
 	}
+
+	public function update() {
+
+	}
+
+	public function delete() {
+		
+	}
 }

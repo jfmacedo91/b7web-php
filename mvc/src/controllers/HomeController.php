@@ -2,22 +2,15 @@
 namespace src\controllers;
 
 use \core\Controller;
+use \src\models\User;
 
 class HomeController extends Controller {
 
 	public function index() {
-		$nome = 'Jean';
-		$posts = [
-			['titulo' => 'Titulo de teste 1', 'corpo' => 'Corpo de teste 1'],
-			['titulo' => 'Titulo de teste 2', 'corpo' => 'Corpo de teste 2'],
-			['titulo' => 'Titulo de teste 3', 'corpo' => 'Corpo de teste 3'],
-			['titulo' => 'Titulo de teste 4', 'corpo' => 'Corpo de teste 4'],
-			['titulo' => 'Titulo de teste 5', 'corpo' => 'Corpo de teste 5']
-		];
+		$users = User::select()->execute();
+
 		$this->render('home', [
-			'nome' => $nome,
-			'idade' => 31,
-			'posts' => $posts
+			'users' => $users
 		]);
 	}
 
