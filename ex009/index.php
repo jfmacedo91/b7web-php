@@ -27,7 +27,7 @@
   $calc -> sub(1);
   $calc -> multiply(3);
   $calc -> divide(2);
-  $calc -> add(0.5);
+  $calc -> add(2);
 
   echo '<h1>TOTAL: '.$calc -> total().'</h1>';
   $calc -> clear();
